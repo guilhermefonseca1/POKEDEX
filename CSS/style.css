@@ -7,6 +7,28 @@
     padding: 0;
 }
 
+.button {
+    background-color: #444;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    color: white;
+    font-size: clamp(5px, 5vw, 1rem);
+    font-weight: 600;
+    padding: 4%;
+    width: 50%;
+}
+
+.buttons {
+    bottom: 10%;
+    display: flex;
+    gap: 20px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-57%, 0);
+    width: 65%;
+}
+
 body {
     background: linear-gradient(to bottom, #6ab7f5, #fff);
     min-height: 100vh;
