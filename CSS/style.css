@@ -26,9 +26,10 @@ main {
 }
 
 .pokemon_data {
-    font-weight: 600;
     color: #aaa;
     position: absolute;
+    font-size: clamp(10.5px, 5vw, 25px);
+    font-weight: 600;
     right: 27%;
     top: 54.5%;
 }
