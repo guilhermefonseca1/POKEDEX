@@ -1,9 +1,18 @@
+const pokemonName = document.querySelector('.pokemon_name');
+
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch((`https://pokeapi.co/api/v2/pokemon/${pokemon}`))
 
     const data = await APIResponse.json();
-    console.log(APIResponse);
+    return data;
 }
 
 
-fetchPokemon('25')
+const renderPokemon = async (pokemon) => {
+    
+    const data = await fetchPokemon(pokemon);
+    pokemonName.innerHTML = data.name;
+    // console.log(data);
+}
+
+renderPokemon('25')
