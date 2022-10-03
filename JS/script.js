@@ -23,6 +23,8 @@ const APIResponse = await fetch((`https://pokeapi.co/api/v2/pokemon/${pokemon.to
 
 const renderPokemon = async (pokemon) => {
     
+    pokemonName.innerHTML = 'Loading...';
+    
     const data = await fetchPokemon(pokemon);
     if (data) {
         pokemonName.innerHTML = data.name;
@@ -32,6 +34,7 @@ const renderPokemon = async (pokemon) => {
         input.value = '';
     } else {
         pokemonName.innerHTML = 'Not found :c';
+        pokemonNumber.innerHTML = '';
     }
 }
 
