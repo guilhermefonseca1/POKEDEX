@@ -31,5 +31,6 @@ form.addEventListener('submit', (event) => {
 
     event.preventDefault();
 
-    console.log(input.value)
+    // console.log(input.value)
+    renderPokemon(input.value)
 })
