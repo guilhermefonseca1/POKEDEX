@@ -24,7 +24,8 @@ const APIResponse = await fetch((`https://pokeapi.co/api/v2/pokemon/${pokemon.to
 const renderPokemon = async (pokemon) => {
     
     pokemonName.innerHTML = 'Loading...';
-    
+    pokemonNumber.innerHTML = '';
+
     const data = await fetchPokemon(pokemon);
     if (data) {
         pokemonName.innerHTML = data.name;
@@ -46,3 +47,5 @@ form.addEventListener('submit', (event) => {
     renderPokemon(input.value);
     
 })
+
+renderPokemon('1')
